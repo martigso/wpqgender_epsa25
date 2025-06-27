@@ -171,7 +171,7 @@ library(tidyverse)
 ::: {.nonincremental}
 
 1. WPQs are (also) gendered by sender
-    - Women use more similar languge to other women
+    - Women use more similar language to other women
     - Vice versa for men
 2. WPQs are gendered by receiver
     - [Overall:]{.darkcyan} 
