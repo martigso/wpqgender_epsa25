@@ -1,0 +1,187 @@
+---
+title: "[Parliamentary Interaction and Gendered Communication]{.titlechill}"
+author: 
+  - name: "Maiken Røed"
+    affiliation: "University of Oslo"
+  - name: "Martin Søyland"
+    affiliation: "University of Oslo"
+    email: "martin.soyland@stv.uio.no"
+  - name: "Hanna Bäck"
+    affiliation: "Lund University"
+    email: 
+format: 
+  revealjs:
+    embed-resources: true
+    transition: slide
+    incremental: true
+    theme: [serif, ../style.scss]
+bibliography: ../../ref.bib
+---
+
+```{r}
+#| label: setup
+#| echo: false
+#| warning: false
+#| message: false
+
+library(kableExtra)
+library(tidyverse)
+
+```
+
+# At a glance {.smaller} 
+
+</br> 
+
+| | | |
+|:-|:---|
+| [Context:]{.red}               | Written parliamentary questions |
+| [Gap:]{.orange}                | Gender and sender-receiver dynamics in parliament |
+| [RQ:]{.yellow}                 | Is languagage more similar among senders and receivers of the same gender? |
+| [Overall finding :]{.midgreen} | Senders: Yes!; Receivers: Yes, but only among female MPs |
+| [Immidiate finding:]{.blue}    | Man to woman: more male language <br> Woman to man: more female language (but only among male MPs) |
+
+
+# Gender effects in parliament { .smaller }
+
+
+:::: {.columns}
+
+::: {.column .nonincremental}
+
+- Parliaments as gendered organizations [e.g. @Erikson2019]
+    - Institutional design path-dependency [@Acker1990]
+- Socialization effect [@Silva2025]
+    - Women adopt more masculine style of language
+
+:::
+
+::: {.column }
+
+![](stortingsbygningen.jpg)
+
+:::
+
+
+::::
+
+
+## Gender and interaction {.smaller}
+
+
+:::: {.columns}
+
+::: {.column .nonincremental}
+
+- [Role congruity theory]{.darkcyan}
+    - Ingrained views on how men and women are supposed to behave
+    - Deviating: possible negative consequences
+
+- [Social identity theory]{.orange}
+    - People of same gender: ingroup
+    - Uphold gender identity
+    - Breaking group norms: possible negative consequences
+
+:::
+
+::: {.column .fragment .nonincremental}
+
+- [Context:]{.midgreen}
+    - Written Parliamentary Questions (WPQs)
+    - Designated receiver
+    - No social face-to-face interaction
+
+![](sporretime.jpg)
+
+:::
+
+
+::::
+
+
+## Hypotheses
+
+:::: {.columns}
+
+
+::: {.column}
+
+![](finansdebatt_2021.jpg)
+:::
+
+::: {.column}
+
+
+[[Hypothesis 1:]{.midgreen} _WPQ language is more likely to be similar to questions by other MPs of the same gender_]{.fragment}
+
+
+[[Hypothesis 2:]{.orange} _Language is even more aligned with one’s own gender if the receiving minister is also of the same gender_]{.fragment}
+
+
+:::
+
+::::
+
+
+
+# Methods {.smaller}
+
+:::: {.columns}
+
+::: {.column .nonincremental}
+
+- [Data]{.darkred}
+    - All WPQs from 1998-2021
+        - (We will expand to 2025 after the election)
+    - N = $29,701$
+- [Measurement]{.blue}
+    - XGboost classification of gender $[0,1]$ [@wackerle2023distinctive]
+:::
+
+::: {.column .fragment .nonincremental}
+
+- [Estimation]{.midgreen}
+    - Overall trends: Fractional logit with gender measure as DV
+    - Immediate effect: RD on minister post change
+        - Woman &rarr; Man
+        - Man &rarr; Woman
+
+:::
+
+::::
+
+# Analyses
+
+## Overall {.smaller auto-animate=true transition="none"}
+
+![](mod4.png){width=95.25%}
+
+
+# Immediate {.smaller auto-animate=true}
+
+![Minister change from man to woman](effect_minister_from_mantowoman2.png)
+
+# Immediate {.smaller auto-animate=true}
+
+
+![Minister change from woman to man](effect_minister_from_womantoman.png)
+
+# Summary { .smaller }
+
+1. WPQs are (also) gendered by sender
+    - Women use more similar languge to other women
+    - Vice versa for men
+2. WPQs are gendered by receiver
+    - [Overall:]{.darkcyan} 
+        - Women MPs use more feminine language when receiving minister is a woman
+        - No effect for men
+    - [Immediate:]{.orange}
+        - Minister man &rarr; woman: Women/men MPs more masculine language
+        - Minister woman &rarr; man: Men MPs more feminine language
+
+
+
+# References
+
+::: {#refs}
+:::
