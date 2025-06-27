@@ -166,7 +166,7 @@ library(tidyverse)
 
 ![Minister change from woman to man](effect_minister_from_womantoman.png)
 
-# Summary { .smaller }
+# Summary { .smaller .nonincremental }
 
 1. WPQs are (also) gendered by sender
     - Women use more similar languge to other women
